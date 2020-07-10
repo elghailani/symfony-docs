@@ -430,19 +430,19 @@ functional test that checks that all application URLs load successfully::
     }
 
 Add this test while creating your application because it requires little effort
-and checks that none of your pages returns an error. Later you'll add more
+and checks that none of your pages returns an error. Later, you'll add more
 specific tests for each page.
 
 Hardcode URLs in a Functional Test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In Symfony applications it's recommended to :ref:`generate URLs <routing-generating-urls>`
+In Symfony applications, it's recommended to :ref:`generate URLs <routing-generating-urls>`
 using routes to automatically update all links when a URL changes. However, if a
 public URL changes, users won't be able to browse it unless you set up a
 redirection to the new URL.
 
 That's why it's recommended to use raw URLs in tests instead of generating them
-from routes. Whenever a route changes, tests will break and you'll know that
+from routes. Whenever a route changes, tests will fail and you'll know that
 you must set up a redirection.
 
 .. _`Symfony Demo`: https://github.com/symfony/demo
