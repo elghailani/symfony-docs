@@ -81,7 +81,7 @@ Configuration
 Use Environment Variables for Infrastructure Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These are the options that change from one machine to another (e.g. from your
+These are the options that thier values change from one machine to another (e.g. from your
 development machine to the production server) but which don't change the
 application behavior.
 
@@ -92,7 +92,7 @@ Use Secret for Sensitive Information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When your application has sensitive configuration - like an API key - you should
-store those securely via :doc:`secrets </configuration/secrets>`.
+store those securely via :doc:`Symfony’s secrets management system </configuration/secrets>`.
 
 Use Parameters for Application Configuration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -436,13 +436,13 @@ specific tests for each page.
 Hardcode URLs in a Functional Test
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In Symfony applications it's recommended to :ref:`generate URLs <routing-generating-urls>`
+In Symfony applications, it's recommended to :ref:`generate URLs <routing-generating-urls>`
 using routes to automatically update all links when a URL changes. However, if a
 public URL changes, users won't be able to browse it unless you set up a
 redirection to the new URL.
 
 That's why it's recommended to use raw URLs in tests instead of generating them
-from routes. Whenever a route changes, tests will break and you'll know that
+from routes. Whenever a route changes, tests will fail and you'll know that
 you must set up a redirection.
 
 .. _`Symfony Demo`: https://github.com/symfony/demo
